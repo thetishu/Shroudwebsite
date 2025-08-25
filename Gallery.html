@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gallery | Shroud of Turin</title>
+  <link rel="stylesheet" href="Gallery.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+ 
+  <header class="site-header" aria-expanded="false">
+    <div class="container nav-bar">
+      <a class="brand" href="index.html" aria-label="Homepage">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span class="brand-label">Shroud of Turin</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="History.html">History</a></li>
+          <li><a class="nav-link" href="Scientific Studies.html">Scientific Studies</a></li>
+          <li><a class="nav-link" href="Theories.html">Theories</a></li>
+          <li><a class="nav-link active" href="Gallery.html">Gallery</a></li>
+          <li><a class="nav-link" href="Resources.html">Resources</a></li>
+          <li><a class="nav-link" href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path stroke-linecap="round" d="M3 6h18M3 12h18M3 18h18"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="nav-panel" role="dialog" aria-modal="false" aria-label="Mobile menu">
+      <nav aria-label="Mobile">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="History.html">History</a></li>
+          <li><a class="nav-link" href="Scientific Studies.html">Scientific Studies</a></li>
+          <li><a class="nav-link" href="Theories.html">Theories</a></li>
+          <li><a class="nav-link active" href="Gallery.html">Gallery</a></li>
+          <li><a class="nav-link" href="Resources.html">Resources</a></li>
+          <li><a class="nav-link" href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="kicker">Visual Archive</div>
+          <h1>Gallery — High-resolution images & imaging studies</h1>
+          <p class="lead">Curated images: full-length views, close-up details, imaging results, and exhibition photography. Click any image to open the lightbox; use ← → or your keyboard to navigate.</p>
+        </div>
+
+        <figure class="hero-media" aria-hidden="false">
+          <img src="IMAGES/Q.jpg" alt="Detail texture of the Shroud (placeholder)">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section filters">
+      <div class="container">
+        <div class="filter-row" role="tablist" aria-label="Gallery filters">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" data-filter="full">Full-length</button>
+          <button class="filter-btn" data-filter="details">Details</button>
+          <button class="filter-btn" data-filter="imaging">Imaging</button>
+          <button class="filter-btn" data-filter="exhibitions">Exhibitions</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery">
+      <div class="container">
+        <div class="gallery-grid" id="galleryGrid">
+          <figure class="tile" data-category="full">
+            <img src="IMAGES/J.jpg" alt="Full-length view of the Shroud" loading="lazy" data-index="0">
+            <figcaption>Full-length view of the Shroud of Turin</figcaption>
+          </figure>
+
+          <figure class="tile" data-category="details">
+            <img src="IMAGES/L.jpg" alt="Close-up of the facial imprint" loading="lazy" data-index="1">
+            <figcaption>Facial imprint — enhanced detail</figcaption>
+          </figure>
+
+          <figure class="tile" data-category="details">
+            <img src="IMAGES/M.jpg" alt="Detail of hands and wrist wounds" loading="lazy" data-index="2">
+            <figcaption>Hands and wrist wounds</figcaption>
+          </figure>
+
+          <figure class="tile" data-category="imaging">
+            <img src="IMAGES/N.jpg" alt="Ultraviolet imaging example" loading="lazy" data-index="3">
+            <figcaption>Ultraviolet imaging (contrast)</figcaption>
+          </figure>
+
+          <figure class="tile" data-category="details">
+            <img src="IMAGES/E.jpg" alt="Close-up of linen weave" loading="lazy" data-index="4">
+            <figcaption>Linen weave detail</figcaption>
+          </figure>
+
+          <figure class="tile" data-category="exhibitions">
+            <img src="IMAGES/R.jpg" alt="Public exhibition in Turin" loading="lazy" data-index="5">
+            <figcaption>Public exhibition, Turin</figcaption>
+          </figure>
+
+          <figure class="tile" data-category="imaging">
+            <img src="IMAGES/N.jpg" alt="Multispectral map visualization" loading="lazy" data-index="6">
+            <figcaption>Multispectral mapping</figcaption>
+          </figure>
+
+          <figure class="tile" data-category="full">
+            <img src="IMAGES/P.jpg" alt="Long shot of cloth laid out" loading="lazy" data-index="7">
+            <figcaption>Cloth laid out for study</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Image viewer">
+    <button class="lb-close" aria-label="Close (Esc)">✕</button>
+    <button class="lb-prev" aria-label="Previous (Left)">‹</button>
+    <div class="lb-content" tabindex="-1">
+      <img src="" alt="" id="lbImage">
+      <p id="lbCaption" class="lb-caption"></p>
+    </div>
+    <button class="lb-next" aria-label="Next (Right)">›</button>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="foot-grid">
+        <div>
+          <div class="foot-brand">
+            <span class="brand-dot" aria-hidden="true"></span>
+            <strong>Shroud of Turin</strong>
+          </div>
+          <p class="foot-text">High-resolution images and imaging results curated for study.</p>
+        </div>
+
+        <nav aria-label="Footer">
+          <ul class="foot-links">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="History.html">History</a></li>
+            <li><a href="Scientific Studies.html">Scientific Studies</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="Resources.html">Resources</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <p class="legal">© <span id="year"></span> Shroud of Turin — All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+    const header = document.querySelector('.site-header');
+    const toggle = document.querySelector('.nav-toggle');
+    const panel  = document.getElementById('mobile-menu');
+    const yearEl = document.getElementById('year');
+    yearEl && (yearEl.textContent = new Date().getFullYear());
+
+    function setOpen(open) {
+      header.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-expanded', String(open));
+    }
+    toggle.addEventListener('click', () => {
+      const open = header.getAttribute('aria-expanded') === 'true';
+      setOpen(!open);
+    });
+    panel && panel.addEventListener('click', (e) => {
+      if (e.target.closest('.nav-link')) setOpen(false);
+    });
+    window.addEventListener('resize', () => { if (window.innerWidth > 960) setOpen(false); });
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const tiles = document.querySelectorAll('.gallery-grid .tile');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed','false'); });
+        btn.classList.add('active'); btn.setAttribute('aria-pressed','true');
+        const f = btn.dataset.filter;
+        tiles.forEach(t => {
+          if (f === 'all' || t.dataset.category === f) t.style.display = '';
+          else t.style.display = 'none';
+        });
+        btn.focus();
+      });
+    });
+    const lightbox = document.getElementById('lightbox');
+    const lbImage = document.getElementById('lbImage');
+    const lbCaption = document.getElementById('lbCaption');
+    const lbClose = document.querySelector('.lb-close');
+    const lbPrev = document.querySelector('.lb-prev');
+    const lbNext = document.querySelector('.lb-next');
+    let galleryImages = Array.from(document.querySelectorAll('.gallery-grid img'));
+    let currentIndex = 0;
+    let lastThumbnail = null;
+
+    function openLightbox(index, thumb) {
+      const img = galleryImages[index];
+      lbImage.src = img.src;
+      lbImage.alt = img.alt || '';
+      lbCaption.textContent = img.closest('figure').querySelector('figcaption')?.textContent || '';
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden'; // prevent scroll
+      lightbox.classList.add('open');
+      currentIndex = index;
+      lastThumbnail = thumb || null;
+      document.querySelector('.lb-content').focus();
+    }
+
+    function closeLightbox() {
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+      lbImage.src = '';
+      lbCaption.textContent = '';
+      if (lastThumbnail) lastThumbnail.focus();
+    }
+
+    function showPrev() {
+      currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+      openLightbox(currentIndex);
+    }
+
+    function showNext() {
+      currentIndex = (currentIndex + 1) % galleryImages.length;
+      openLightbox(currentIndex);
+    }
+    galleryImages.forEach((img, i) => {
+      img.addEventListener('click', (e) => openLightbox(i, e.currentTarget));
+      img.addEventListener('keydown', (e) => { if (e.key === 'Enter') openLightbox(i, e.currentTarget); });
+      img.setAttribute('tabindex', '0'); 
+    });
+
+    lbClose.addEventListener('click', closeLightbox);
+    lbPrev.addEventListener('click', showPrev);
+    lbNext.addEventListener('click', showNext);
+    document.addEventListener('keydown', (e) => {
+      if (lightbox.getAttribute('aria-hidden') === 'false') {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') showPrev();
+        if (e.key === 'ArrowRight') showNext();
+      }
+    });
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+    const observer = new MutationObserver(() => {
+      galleryImages = Array.from(document.querySelectorAll('.gallery-grid img'))
+        .filter(img => img.closest('figure').style.display !== 'none');
+    });
+    observer.observe(document.getElementById('galleryGrid'), { attributes: true, subtree: true, attributeFilter: ['style'] });
+
+  })();
+  </script>
+</body>
+</html>

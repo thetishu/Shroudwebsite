@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact | Shroud of Turin</title>
+  <link rel="stylesheet" href="Contact.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" aria-expanded="false">
+    <div class="container nav-bar">
+      <a class="brand" href="Home.html" aria-label="Homepage">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span class="brand-label">Shroud of Turin</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html"	>Home</a></li>
+          <li><a class="nav-link" href="History.html">History</a></li>
+          <li><a class="nav-link" href="Scientific Studies.html">Scientific Studies</a></li>
+          <li><a class="nav-link" href="Theories.html">Theories</a></li>
+          <li><a class="nav-link" href="Gallery.html">Gallery</a></li>
+          <li><a class="nav-link" href="Resources.html">Resources</a></li>
+          <li><a class="nav-link active" href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path stroke-linecap="round" d="M3 6h18M3 12h18M3 18h18"/>
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="nav-panel" role="dialog" aria-modal="false" aria-label="Mobile menu">
+      <nav aria-label="Mobile">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="History.html">History</a></li>
+          <li><a class="nav-link" href="Scientific Studies.html">Scientific Studies</a></li>
+          <li><a class="nav-link" href="Theories.html">Theories</a></li>
+          <li><a class="nav-link" href="Gallery.html">Gallery</a></li>
+          <li><a class="nav-link" href="Resources.html">Resources</a></li>
+          <li><a class="nav-link active" href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="kicker">Contact</div>
+          <h1>Get in touch</h1>
+          <p class="lead">Short, focused form below — reach us with questions, corrections, or resources.</p>
+        </div>
+
+        <figure class="hero-media" aria-hidden="true">
+          <img src="IMAGES/Archive.jpg" alt="Archive detail (decorative)" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width:640px;">
+        <div class="card contact-card" role="region" aria-label="Contact form">
+          <form id="contactForm" class="contact-form" action="#" method="post" novalidate>
+            <div class="field-row">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" />
+            </div>
+
+            <div class="field-row">
+              <label for="email">Email <span class="req">required</span></label>
+              <input id="email" name="email" type="email" required autocomplete="email" />
+            </div>
+
+            <div class="field-row">
+              <label for="message">Message <span class="req">required</span></label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <div class="form-footer">
+              <div id="formStatus" class="form-status" aria-live="polite"></div>
+              <button type="submit" class="btn btn-primary">Send message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="foot-grid">
+        <div>
+          <div class="foot-brand">
+            <span class="brand-dot" aria-hidden="true"></span>
+            <strong>Shroud of Turin</strong>
+          </div>
+          <p class="foot-text">A curated gateway to the artifact, the scholarship, and the story.</p>
+        </div>
+
+        <nav aria-label="Footer">
+          <ul class="foot-links">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="History.html">History</a></li>
+            <li><a href="Scientific Studies.html">Scientific Studies</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="Resources.html">Resources</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <p class="legal">© <span id="year"></span> Shroud of Turin — All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const header = document.querySelector('.site-header');
+      const toggle = document.querySelector('.nav-toggle');
+      const panel  = document.getElementById('mobile-menu');
+      const yearEl = document.getElementById('year');
+      yearEl && (yearEl.textContent = new Date().getFullYear());
+
+      function setOpen(open) {
+        header.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-expanded', String(open));
+      }
+      toggle && toggle.addEventListener('click', () => {
+        const open = header.getAttribute('aria-expanded') === 'true';
+        setOpen(!open);
+      });
+      panel && panel.addEventListener('click', (e) => {
+        if (e.target.closest('.nav-link')) setOpen(false);
+      });
+      window.addEventListener('resize', () => { if (window.innerWidth > 960) setOpen(false); });
+      const form = document.getElementById('contactForm');
+      const status = document.getElementById('formStatus');
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = form.email.value.trim();
+        const message = form.message.value.trim();
+        if (!email || !message) {
+          status.textContent = 'Please provide your email and a short message.';
+          status.style.color = 'var(--accent)';
+          return;
+        }
+        status.textContent = 'Sending…';
+        status.style.color = 'var(--muted)';
+        setTimeout(() => {
+          status.textContent = 'Message sent — thank you. We will reply within a few days.';
+          status.style.color = '#aee89b';
+          form.reset();
+        }, 700);
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Resources | Shroud of Turin</title>
+  <link rel="stylesheet" href="Resources.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" aria-expanded="false">
+    <div class="container nav-bar">
+      <a class="brand" href="Home.html" aria-label="Homepage">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span class="brand-label">Shroud of Turin</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="History.html">History</a></li>
+          <li><a class="nav-link" href="Scientific Studies.html">Scientific Studies</a></li>
+          <li><a class="nav-link" href="Theories.html">Theories</a></li>
+          <li><a class="nav-link" href="Gallery.html">Gallery</a></li>
+          <li><a class="nav-link active" href="Resources.html">Resources</a></li>
+          <li><a class="nav-link" href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path stroke-linecap="round" d="M3 6h18M3 12h18M3 18h18"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="nav-panel" role="dialog" aria-modal="false" aria-label="Mobile menu">
+      <nav aria-label="Mobile">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="History.html">History</a></li>
+          <li><a class="nav-link" href="Scientific Studies.html">Scientific Studies</a></li>
+          <li><a class="nav-link" href="Theories.html">Theories</a></li>
+          <li><a class="nav-link" href="Gallery.html">Gallery</a></li>
+          <li><a class="nav-link active" href="Resources.html">Resources</a></li>
+          <li><a class="nav-link" href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="kicker">Research Library</div>
+          <h1>Resources — primary sources, scientific reports & bibliographies</h1>
+          <p class="lead">A curated collection of key documents, peer-reviewed studies, conservation reports and image resources. Use the filters and search to find what you need quickly.</p>
+        </div>
+        <figure class="hero-media" aria-hidden="false">
+          <img src="IMAGES/S.jpg" alt="Stack of archival documents (placeholder)">
+        </figure>
+      </div>
+    </section>
+    <section class="controls section">
+      <div class="container controls-row">
+        <div class="search-wrap">
+          <label for="res-search" class="sr-only">Search resources</label>
+          <input id="res-search" type="search" placeholder="Search by title, author, year, or keyword" aria-label="Search resources">
+        </div>
+
+        <div class="filters-wrap" role="tablist" aria-label="Resource categories">
+          <button class="filter-btn active" data-cat="all" aria-pressed="true">All</button>
+          <button class="filter-btn" data-cat="primary">Primary Sources</button>
+          <button class="filter-btn" data-cat="science">Scientific Papers</button>
+          <button class="filter-btn" data-cat="conservation">Conservation</button>
+          <button class="filter-btn" data-cat="images">Images</button>
+          <button class="filter-btn" data-cat="books">Books</button>
+        </div>
+
+        <div class="sort-wrap">
+          <label for="res-sort" class="sr-only">Sort</label>
+          <select id="res-sort" aria-label="Sort resources">
+            <option value="relevance">Sort: Relevance</option>
+            <option value="newest">Newest first</option>
+            <option value="oldest">Oldest first</option>
+            <option value="type">By type</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <section class="library section">
+      <div class="container">
+        <div class="library-grid" id="libraryGrid" aria-live="polite">
+
+          <article class="resource card" data-category="science" data-title="STURP 1978 Technical Report" data-year="1978" tabindex="0">
+            <div class="card-body">
+              <h3>STURP (1978) — Technical Reports</h3>
+              <p class="teaser">Comprehensive multidisciplinary imaging and spectroscopy performed by the Shroud of Turin Research Project.</p>
+              <div class="meta-row">
+                <span class="meta-type">Scientific Paper</span>
+                <span class="meta-year">1978</span>
+              </div>
+
+              <details>
+                <summary>View citation & notes</summary>
+                <p><strong>Citation:</strong> Shroud of Turin Research Project. STURP Technical Reports, 1978.</p>
+                <p>Note: foundational imaging datasets and spectroscopy — widely cited in later studies.</p>
+                <p><a class="res-cta" href="#" data-src="pdfs/sturp1978.pdf">Download PDF</a></p>
+              </details>
+            </div>
+          </article>
+
+          <article class="resource card" data-category="science" data-title="Radiocarbon Laboratories 1988" data-year="1988" tabindex="0">
+            <div class="card-body">
+              <h3>Radiocarbon Dating (1988) — Multi-lab Study</h3>
+              <p class="teaser">Results published by three laboratories indicating medieval dates; widely discussed and critiqued afterwards.</p>
+              <div class="meta-row">
+                <span class="meta-type">Scientific Paper</span>
+                <span class="meta-year">1988</span>
+              </div>
+
+              <details>
+                <summary>View citation & notes</summary>
+                <p><strong>Citation:</strong> Damon, P. E. et al., Nature 1989 (Radiocarbon dating study).</p>
+                <p>Note: see follow-up critiques about sample representativeness and contamination hypotheses.</p>
+                <p><a class="res-cta" href="#" data-src="pdfs/radiocarbon1988.pdf">Read study</a></p>
+              </details>
+            </div>
+          </article>
+
+          <article class="resource card" data-category="conservation" data-title="2002 Restoration Report" data-year="2002" tabindex="0">
+            <div class="card-body">
+              <h3>2002 Conservation & Restoration Report</h3>
+              <p class="teaser">Documentation of the 2002 conservation program: cleaning decisions, textile supports, and imaging during restoration.</p>
+              <div class="meta-row">
+                <span class="meta-type">Conservation</span>
+                <span class="meta-year">2002</span>
+              </div>
+
+              <details>
+                <summary>View citation & notes</summary>
+                <p><strong>Citation:</strong> Turin Cathedral Conservation Dept., 2002 restoration documentation.</p>
+                <p><a class="res-cta" href="#" data-src="pdfs/restoration2002.pdf">Download report</a></p>
+              </details>
+            </div>
+          </article>
+
+          <article class="resource card" data-category="images" data-title="High-res image set" data-year="2010" tabindex="0">
+            <div class="card-body">
+              <h3>High-Resolution Image Set</h3>
+              <p class="teaser">High-res stitched photos and detail crops useful for archival study; includes face, hands, and damaged areas.</p>
+              <div class="meta-row">
+                <span class="meta-type">Images</span>
+                <span class="meta-year">2010</span>
+              </div>
+
+              <details>
+                <summary>View citation & notes</summary>
+                <p><strong>Notes:</strong> Use high-res images for side-by-side comparisons and close-fiber analysis.</p>
+                <p><a class="res-cta" href="#" data-src="images/hires.zip">Download images</a></p>
+              </details>
+            </div>
+          </article>
+
+          <article class="resource card" data-category="books" data-title="Comprehensive monograph" data-year="2015" tabindex="0">
+            <div class="card-body">
+              <h3>Comprehensive Monograph: History & Science</h3>
+              <p class="teaser">A modern scholarly monograph synthesizing historical sources and scientific literature.</p>
+              <div class="meta-row">
+                <span class="meta-type">Book</span>
+                <span class="meta-year">2015</span>
+              </div>
+
+              <details>
+                <summary>View citation & notes</summary>
+                <p><strong>Citation:</strong> Doe, J. (2015). The Shroud: History and Investigation. Academic Press.</p>
+                <p><a class="res-cta" href="#" data-src="pdfs/monograph2015.pdf">Get chapter sample</a></p>
+              </details>
+            </div>
+          </article>
+
+        </div>
+
+        
+        <div id="emptyState" class="empty-state" hidden>
+          <p>No resources match your search or filter. Try removing filters or broadening your query.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt bibliography">
+      <div class="container">
+        <h2>Selected Bibliography</h2>
+        <ol class="dot-list">
+          <li><strong>STURP (1978)</strong> — Shroud of Turin Research Project, technical reports.</li>
+          <li><strong>Damon et al. (1989)</strong> — Radiocarbon dating study, Nature.</li>
+          <li><strong>Turin Conservation Dept. (2002)</strong> — Restoration documentation.</li>
+          <li><strong>Pia, S. (1898)</strong> — Photographic notes (Secondo Pia).</li>
+        </ol>
+        <p class="muted">Want these exported as a BibTeX or Chicago-style list? I can compile and format them for you.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="foot-grid">
+        <div>
+          <div class="foot-brand">
+            <span class="brand-dot" aria-hidden="true"></span>
+            <strong>Shroud of Turin</strong>
+          </div>
+          <p class="foot-text">Curated research resources for scholars and the curious.</p>
+        </div>
+
+        <nav aria-label="Footer">
+          <ul class="foot-links">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="History.html">History</a></li>
+            <li><a href="Scientific Studies.html">Scientific Studies</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="Resources.html">Resources</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <p class="legal">© <span id="year"></span> Shroud of Turin — All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+  
+    const header = document.querySelector('.site-header');
+    const toggle = document.querySelector('.nav-toggle');
+    const panel  = document.getElementById('mobile-menu');
+    const yearEl = document.getElementById('year');
+    yearEl && (yearEl.textContent = new Date().getFullYear());
+
+    function setOpen(open) {
+      header.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-expanded', String(open));
+    }
+    toggle.addEventListener('click', () => {
+      const open = header.getAttribute('aria-expanded') === 'true';
+      setOpen(!open);
+    });
+    panel && panel.addEventListener('click', (e) => {
+      if (e.target.closest('.nav-link')) setOpen(false);
+    });
+    window.addEventListener('resize', () => { if (window.innerWidth > 960) setOpen(false); });
+
+    const filterBtns = Array.from(document.querySelectorAll('.filter-btn'));
+    const searchInput = document.getElementById('res-search');
+    const sortSelect  = document.getElementById('res-sort');
+    const grid = document.getElementById('libraryGrid');
+    const cards = Array.from(grid.querySelectorAll('.resource'));
+    const emptyState = document.getElementById('emptyState');
+
+    function normalize(s){ return (s||'').toString().toLowerCase().trim(); }
+
+    function applyFilters(){
+      const activeCat = filterBtns.find(b => b.classList.contains('active'))?.dataset.cat || 'all';
+      const q = normalize(searchInput.value);
+      const sort = sortSelect.value;
+
+      let visible = 0;
+      cards.forEach(card => {
+        const cat = card.dataset.category || '';
+        const title = normalize(card.dataset.title || card.querySelector('h3')?.textContent);
+        const year = card.dataset.year || '';
+        const text = normalize(card.querySelector('.teaser')?.textContent || '') + ' ' + title + ' ' + year;
+
+        const catMatch = (activeCat === 'all') || (cat === activeCat);
+        const qMatch = q === '' || text.includes(q);
+
+        if (catMatch && qMatch){
+          card.style.display = '';
+          visible++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      emptyState.hidden = visible > 0;
+      sortResults(sort);
+    }
+
+    function sortResults(mode){
+      const visibleCards = cards.filter(c => c.style.display !== 'none');
+      let sorted = visibleCards.slice();
+      if (mode === 'newest') {
+        sorted.sort((a,b) => (parseInt(b.dataset.year||0) - parseInt(a.dataset.year||0)));
+      } else if (mode === 'oldest') {
+        sorted.sort((a,b) => (parseInt(a.dataset.year||0) - parseInt(b.dataset.year||0)));
+      } else if (mode === 'type') {
+        sorted.sort((a,b) => (a.dataset.category || '').localeCompare(b.dataset.category || ''));
+      } else {
+
+      }
+      sorted.forEach(node => grid.appendChild(node));
+    }
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed','false'); });
+        btn.classList.add('active'); btn.setAttribute('aria-pressed','true');
+        applyFilters();
+      });
+    });
+    let searchTimer = null;
+    searchInput.addEventListener('input', () => {
+      clearTimeout(searchTimer);
+      searchTimer = setTimeout(applyFilters, 220);
+    });
+    sortSelect.addEventListener('change', applyFilters);
+    document.addEventListener('click', (e) => {
+      const a = e.target.closest('.res-cta');
+      if (!a) return;
+      e.preventDefault();
+      const src = a.dataset.src;
+      if (!src) { alert('Resource not linked yet — replace data-src with a real URL.'); return; }
+      window.open(src, '_blank');
+    });
+    applyFilters();
+  })();
+  </script>
+</body>
+</html>
