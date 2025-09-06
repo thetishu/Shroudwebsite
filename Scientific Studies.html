@@ -7,42 +7,47 @@
   <link rel="stylesheet" href="Scientific Studies.css">
 </head>
 <body>
-   <header class="site-header" >
-    <div class="container nav-bar">
-      <a class="brand" href="index.html" aria-label="Homepage">
-      </a>
-  <nav class="navbar desktop-nav" aria-label="Main Navigation">
-    <h1 class="logo">Shroud of Turin</h1>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="History.html">History</a></li>
-      <li><a href="Scientific Studies.html" class="active">Scientific Studies</a></li>
-      <li><a href="Theories.html">Theories</a></li>
-      <li><a href="Gallery.html">Gallery</a></li>
-      <li><a href="Resources.html">Resources</a></li>
-      <li><a href="Contact.html">Contact</a></li>
-    </ul>
-  </nav>
+ <header class="site-header" aria-expanded="false">
+  <div class="container nav-bar">
+    <a class="brand" href="index.html" aria-label="Homepage">
+      <span class="brand-dot" aria-hidden="true"></span>
+      <span class="brand-label">Shroud of Turin</span>
+    </a>
+
+    <nav class="nav desktop-nav" aria-label="Main Navigation">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="History.html">History</a></li>
+        <li><a class="nav-link active" href="Scientific Studies.html">Scientific Studies</a></li>
+        <li><a class="nav-link" href="Theories.html">Theories</a></li>
+        <li><a class="nav-link" href="Gallery.html">Gallery</a></li>
+        <li><a class="nav-link" href="Resources.html">Resources</a></li>
+        <li><a class="nav-link" href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
 
     <button class="nav-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle menu">
-        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8">
-          <path stroke-linecap="round" d="M3 6h18M3 12h18M3 18h18"/>
-        </svg>
-      </button>
-       <div id="mobile-menu" class="nav-panel" role="dialog" aria-modal="false" aria-label="Mobile menu">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path stroke-linecap="round" d="M3 6h18M3 12h18M3 18h18"/>
+      </svg>
+    </button>
+
+    <div id="mobile-menu" class="nav-panel" role="dialog" aria-modal="false" aria-label="Mobile menu">
       <nav aria-label="Mobile">
         <ul class="nav-list">
           <li><a class="nav-link" href="index.html">Home</a></li>
           <li><a class="nav-link" href="History.html">History</a></li>
-          <li><a class="nav-link" href="Scientific Studies.html">Scientific Studies</a></li>
-          <li><a class="nav-link active" href="Theories.html">Theories</a></li>
+          <li><a class="nav-link active" href="Scientific Studies.html">Scientific Studies</a></li>
+          <li><a class="nav-link" href="Theories.html">Theories</a></li>
           <li><a class="nav-link" href="Gallery.html">Gallery</a></li>
           <li><a class="nav-link" href="Resources.html">Resources</a></li>
           <li><a class="nav-link" href="Contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
-  </header>
+  </div>
+</header>
+
 
   <section class="intro">
     <h1>Scientific Studies of the Shroud</h1>
@@ -129,6 +134,7 @@
 
 </body>
 </html>
+
 
 
 
