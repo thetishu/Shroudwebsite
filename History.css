@@ -14,6 +14,49 @@
   --container: 1180px;
   --shadow: 0 16px 44px rgba(0,0,0,0.55);
 }
+.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 80;
+  background: rgba(12,12,12,.82);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+.nav-bar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:12px 0;
+}
+.brand{ display:inline-flex; align-items:center; gap:10px; font-weight:800; color:var(--text); text-decoration:none; }
+.brand-dot{ width:12px; height:12px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 6px rgba(255,184,77,0.10); }
+.brand-label{ font-size:1rem; white-space:nowrap; }
+
+.nav{ display:flex; align-items:center; gap:8px; }
+.nav-list{ list-style:none; display:flex; gap:8px; margin:0; padding:0; align-items:center; }
+.nav-link{
+  padding:10px 14px; border-radius:10px; color:var(--text); text-decoration:none; font-weight:600;
+  transition: background .16s ease, color .16s ease, transform .12s ease;
+}
+.nav-link:hover{ background: rgba(255,255,255,0.04); color:var(--accent); transform: translateY(-1px); }
+.nav-link.active{ background: linear-gradient(90deg,var(--brown), #241710); color:var(--accent); }
+
+.nav-toggle{ display:inline-flex; width:44px; height:44px; align-items:center; justify-content:center; border-radius:10px; border:0; background:transparent; color:var(--text); cursor:pointer; }
+.nav-toggle:hover{ background: rgba(255,255,255,0.04); }
+
+.nav-panel{ display:none; position:fixed; inset:62px 0 auto 0; background: rgba(12,12,12,0.98); padding:12px var(--gutter); box-shadow: var(--shadow); }
+.nav-panel .nav-list{ flex-direction:column; align-items:stretch; gap:6px; }
+.site-header[aria-expanded="true"] .nav-panel{ display:block; }
+
+@media (min-width: 961px) {
+  .nav-list { flex-direction: row !important; }
+  .nav-panel { display: none !important; }
+}
+@media (max-width: 960px) {
+  .nav{ display:none; }
+  .nav-toggle{ display:inline-flex; }
+}
 * { box-sizing: border-box; }
 html,body { height: 100%; }
 body {
@@ -144,3 +187,4 @@ details[open] summary{ color:var(--accent); }
   .brand-label{ font-size:.95rem; }
   .hero h1{ font-size:1.6rem; }
 }
+
