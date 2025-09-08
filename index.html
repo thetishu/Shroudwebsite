@@ -291,9 +291,39 @@
         if (window.innerWidth > 960) setOpen(false);
       });
     })();
-  </script>
+    
+(function () {
+  const header = document.querySelector('.site-header');
+  const toggle = document.querySelector('.nav-toggle');
+  const panel  = document.getElementById('mobile-menu');
+
+  if (!header || !toggle || !panel) return;
+
+  function setOpen(open) {
+    header.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-expanded', String(open));
+    panel.style.display = open ? 'block' : 'none';
+  }
+
+  toggle.addEventListener('click', () => {
+    const open = header.getAttribute('aria-expanded') === 'true';
+    setOpen(!open);
+  });
+
+  // close when clicking a link inside the panel
+  panel && panel.addEventListener('click', (e) => {
+    if (e.target.closest('.nav-link')) setOpen(false);
+  });
+
+  // close on resize (desktop)
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 960) setOpen(false);
+  });
+})();
+</script>
 </body>
 </html>
+
 
 
 
